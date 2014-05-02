@@ -1,18 +1,15 @@
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Inherit device configuration
+$(call inherit-product, device/samsung/captivatemtd/full_captivatemtd.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := Captivate
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-# Inherit device configuration
-$(call inherit-product, device/samsung/captivatemtd/full_captivatemtd.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := captivatemtd
-PRODUCT_NAME := cm_captivatemtd
+PRODUCT_NAME := omni_captivatemtd
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SGH-I897
 
